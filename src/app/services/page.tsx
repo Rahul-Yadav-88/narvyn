@@ -1,8 +1,8 @@
 "use client"
 
-import { Particles } from "@/components/particles"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Particles } from "../../components/particles"
+import { Header } from "../../components/header"
+import { Footer } from "../../components/footer"
 import { Code2, Palette, Zap, Cloud, Shield, BarChart3 } from "lucide-react"
 import { useState } from "react"
 
