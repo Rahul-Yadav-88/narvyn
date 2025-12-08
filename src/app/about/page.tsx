@@ -1,8 +1,8 @@
 "use client"
 
-import { Particles } from "@/components/particles"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Particles } from "../../components/particles"
+import { Header } from "../../components/header"
+import { Footer } from "../../components/footer"
 import { Users, Target, Zap, Award, Lightbulb, Rocket } from "lucide-react"
 
 const team = [
@@ -35,7 +35,7 @@ const team = [
 export default function About() {
   return (
     <div className="min-h-screen bg-[#0a0b10] overflow-hidden relative">
-      <Particles particleCount={65} particleColor="#9adfff" particleSpeed={0.25} />
+      <Particles particleCount={130} particleColor="#9adfff" particleSpeed={0.25} />
 
       <div className="relative z-10">
         <Header />
@@ -92,7 +92,7 @@ export default function About() {
                 className="glass-effect p-8 rounded-2xl border border-[rgba(106,227,255,0.2)] text-center group hover:border-[rgba(106,227,255,0.5)] transition-all hover:shadow-lg hover:shadow-[#6ae3ff]/20 animate-fade-in-up animate-glow-box-shadow"
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-                <item.icon className="w-14 h-14 text-[#d4af37] mx-auto mb-4 group-hover:text-[#6ae3ff] group-hover:scale-125 transition-all duration-300" />
+                <item.icon className="w-14 h-14 text-[#d4af37] mx-auto mb-4 group-hover:text-[#6ae3ff] group-hover:scale-125 transition-all duration-300 animate-icon-rotate" />
                 <h3 className="text-2xl font-serif font-bold mb-3 text-[#e5e7eb]">{item.title}</h3>
                 <p className="text-[#cbd5e1]">{item.description}</p>
               </div>
@@ -130,7 +130,7 @@ export default function About() {
                   className="glass-effect p-8 rounded-2xl border border-[rgba(106,227,255,0.2)] hover:border-[rgba(106,227,255,0.5)] transition-all animate-fade-in-up animate-glow-box-shadow"
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >
-                  <value.icon className="w-12 h-12 text-[#d4af37] mb-4 hover:scale-110 transition-transform" />
+                  <value.icon className="w-12 h-12 text-[#d4af37] mb-4 hover:scale-110 transition-transform animate-icon-rotate" />
                   <h3 className="text-xl font-serif font-bold mb-3 text-[#e5e7eb]">{value.title}</h3>
                   <p className="text-[#cbd5e1]">{value.description}</p>
                 </div>

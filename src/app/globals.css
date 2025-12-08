@@ -303,6 +303,16 @@
   }
 }
 
+/* Add icon rotation animation */
+@keyframes icon-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
@@ -350,6 +360,10 @@
 
 .animate-scale-in {
   animation: scale-in 0.6s ease-out;
+}
+
+.animate-icon-rotate {
+  animation: icon-rotate 3s linear infinite;
 }
 
 /* Added advanced futuristic animations and effects */
@@ -506,6 +520,99 @@
   }
 }
 
+/* Add advanced card-specific animations */
+
+/* Card entrance animation */
+@keyframes card-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Card hover 3D tilt effect */
+@keyframes card-tilt {
+  0% {
+    transform: perspective(1000px) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(0) rotateY(0);
+  }
+}
+
+/* Card border glow animation */
+@keyframes card-border-glow {
+  0%,
+  100% {
+    border-color: rgba(106, 227, 255, 0.2);
+    box-shadow: 0 0 15px rgba(106, 227, 255, 0.1), inset 0 0 15px rgba(106, 227, 255, 0.05);
+  }
+  50% {
+    border-color: rgba(106, 227, 255, 0.6);
+    box-shadow: 0 0 30px rgba(106, 227, 255, 0.4), inset 0 0 20px rgba(106, 227, 255, 0.15);
+  }
+}
+
+/* Gradient shift animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Shimmer overlay on cards */
+@keyframes card-shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Pulse background */
+@keyframes card-pulse-bg {
+  0%,
+  100% {
+    background-color: rgba(15, 16, 23, 0.7);
+  }
+  50% {
+    background-color: rgba(15, 16, 23, 0.9);
+  }
+}
+
+/* Floating animation for cards */
+@keyframes card-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Corner accent glow */
+@keyframes corner-glow {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
 /* Animation class declarations */
 .animate-text-reveal {
   animation: text-reveal 1s ease-out;
@@ -555,6 +662,37 @@
   animation: pulse-ring 2s ease-in-out infinite;
 }
 
+/* Animation class declarations for cards */
+.animate-card-slide-in {
+  animation: card-slide-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animate-card-border-glow {
+  animation: card-border-glow 3s ease-in-out infinite;
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 5s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-card-shimmer {
+  animation: card-shimmer 2s infinite;
+  background-size: 200% 100%;
+}
+
+.animate-card-pulse-bg {
+  animation: card-pulse-bg 3s ease-in-out infinite;
+}
+
+.animate-card-float {
+  animation: card-float 4s ease-in-out infinite;
+}
+
+.animate-corner-glow {
+  animation: corner-glow 3s ease-in-out infinite;
+}
+
 /* Stagger delays for sequential animations */
 .animate-stagger-1 {
   animation-delay: 0s;
@@ -596,4 +734,47 @@
 .scroll-reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Card hover state with multiple effects */
+.card-premium {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-premium::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.card-premium:hover::before {
+  left: 100%;
+}
+
+.card-premium:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(106, 227, 255, 0.3), 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+/* Card with background gradient animation */
+.card-gradient-animated {
+  background: linear-gradient(
+    -45deg,
+    rgba(212, 175, 55, 0.1),
+    rgba(106, 227, 255, 0.1),
+    rgba(212, 175, 55, 0.05),
+    rgba(106, 227, 255, 0.05)
+  );
+  background-size: 400% 400%;
+}
+
+.card-gradient-animated:hover {
+  animation: gradient-shift 3s ease infinite;
 }

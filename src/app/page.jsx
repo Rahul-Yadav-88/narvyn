@@ -1,8 +1,8 @@
 "use client"
 
-import { Particles } from "../components/particles"
-import { Header } from "../components/header"
-import { Footer } from "../components/footer"
+import { Particles } from "@/components/particles"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import Link from "next/link"
 import { ArrowRight, Code2, Zap, Shield, Sparkles, Rocket } from "lucide-react"
 import { useEffect, useState, useRef } from "react"
@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0a0b10] overflow-hidden relative">
-      <Particles particleCount={80} particleColor="#6ae3ff" particleSpeed={0.4} />
+      <Particles particleCount={150} particleColor="#6ae3ff" particleSpeed={0.4} />
 
       <div className="relative z-10">
         <Header />
@@ -156,14 +156,11 @@ export default function Home() {
               ].map((feature, i) => (
                 <div
                   key={i}
-                  className="scroll-reveal glass-effect p-8 rounded-2xl border border-[rgba(106,227,255,0.2)] hover:border-[rgba(106,227,255,0.5)] transition-all hover:shadow-lg hover:shadow-[#6ae3ff]/20 group animate-fade-in-up animate-glow-box-shadow hover-lift hover-glow"
+                  className="scroll-reveal glass-effect p-8 rounded-2xl border border-[rgba(106,227,255,0.2)] hover:border-[rgba(106,227,255,0.5)] transition-all hover:shadow-lg hover:shadow-[#6ae3ff]/20 group animate-fade-in-up animate-glow-box-shadow hover-lift hover-glow card-premium animate-card-slide-in animate-card-border-glow"
                   style={{ animationDelay: `${i * 0.1}s` }}
                   ref={addRef}
                 >
-                  <feature.icon
-                    className="w-12 h-12 text-[#d4af37] mb-4 group-hover:text-[#6ae3ff] transition-colors group-hover:scale-110 transform duration-300 group-hover:animate-spin"
-                    style={{ animationDuration: "2s" }}
-                  />
+                  <feature.icon className="w-12 h-12 text-[#d4af37] mb-4 group-hover:text-[#6ae3ff] transition-colors group-hover:scale-110 transform duration-300 animate-icon-rotate" />
                   <h3 className="text-xl font-serif font-bold mb-3 text-[#e5e7eb]">{feature.title}</h3>
                   <p className="text-[#cbd5e1] leading-relaxed">{feature.description}</p>
                 </div>
@@ -184,7 +181,7 @@ export default function Home() {
                 (tech, i) => (
                   <div
                     key={i}
-                    className="scroll-reveal glass-effect p-6 rounded-xl border border-[rgba(106,227,255,0.2)] text-center hover:border-[rgba(106,227,255,0.6)] transition-all hover:scale-110 hover:shadow-lg hover:shadow-[#6ae3ff]/30 animate-fade-in-up hover-lift"
+                    className="scroll-reveal glass-effect p-6 rounded-xl border border-[rgba(106,227,255,0.2)] text-center hover:border-[rgba(106,227,255,0.6)] transition-all hover:scale-110 hover:shadow-lg hover:shadow-[#6ae3ff]/30 animate-fade-in-up hover-lift card-premium animate-card-slide-in"
                     style={{ animationDelay: `${i * 0.05}s` }}
                     ref={addRef}
                   >
@@ -199,7 +196,7 @@ export default function Home() {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div
-            className="max-w-4xl mx-auto glass-effect p-12 md:p-16 rounded-3xl border border-[rgba(212,175,55,0.3)] text-center animate-glow-box-shadow scroll-reveal hover-glow relative overflow-hidden group"
+            className="max-w-4xl mx-auto glass-effect p-12 md:p-16 rounded-3xl border border-[rgba(212,175,55,0.3)] text-center animate-glow-box-shadow scroll-reveal hover-glow relative overflow-hidden group card-premium animate-card-slide-in animate-card-border-glow"
             ref={addRef}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#d4af37]/0 via-[#6ae3ff]/10 to-[#d4af37]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

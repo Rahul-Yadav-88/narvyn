@@ -62,7 +62,7 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-[#0a0b10] overflow-hidden relative">
-      <Particles particleCount={60} particleColor="#d4af37" particleSpeed={0.3} />
+      <Particles particleCount={120} particleColor="#d4af37" particleSpeed={0.3} />
 
       <div className="relative z-10">
         <Header />
@@ -96,11 +96,11 @@ export default function Services() {
               {services.map((service, i) => (
                 <div
                   key={i}
-                  className="glass-effect p-8 rounded-2xl border border-[rgba(106,227,255,0.2)] hover:border-[rgba(106,227,255,0.5)] transition-all hover:shadow-lg hover:shadow-[#6ae3ff]/20 group animate-fade-in-up cursor-pointer animate-glow-box-shadow"
+                  className="glass-effect p-8 rounded-2xl border border-[rgba(106,227,255,0.2)] hover:border-[rgba(106,227,255,0.5)] transition-all hover:shadow-lg hover:shadow-[#6ae3ff]/20 group animate-fade-in-up cursor-pointer animate-glow-box-shadow card-premium animate-card-slide-in animate-card-border-glow"
                   style={{ animationDelay: `${i * 0.05}s` }}
                   onClick={() => setExpandedIndex(expandedIndex === i ? null : i)}
                 >
-                  <service.icon className="w-14 h-14 text-[#d4af37] mb-4 group-hover:text-[#6ae3ff] transition-colors group-hover:scale-125 transform duration-300" />
+                  <service.icon className="w-14 h-14 text-[#d4af37] mb-4 group-hover:text-[#6ae3ff] transition-colors group-hover:scale-125 transform duration-300 animate-icon-rotate" />
                   <h3 className="text-2xl font-serif font-bold mb-3 text-[#e5e7eb]">{service.title}</h3>
                   <p className="text-[#cbd5e1] mb-6 leading-relaxed">{service.description}</p>
                   {expandedIndex === i && (
@@ -146,8 +146,12 @@ export default function Services() {
                 { step: "03", title: "Development", desc: "Building with precision and best practices.", icon: "⚙️" },
                 { step: "04", title: "Deploy", desc: "Launch and optimize for maximum performance.", icon: "🚀" },
               ].map((item, i) => (
-                <div key={i} className="relative group animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s` }}>
-                  <div className="glass-effect p-8 rounded-2xl border border-[rgba(106,227,255,0.2)] group-hover:border-[rgba(106,227,255,0.5)] transition-all group-hover:shadow-lg group-hover:shadow-[#6ae3ff]/20 animate-glow-box-shadow">
+                <div
+                  key={i}
+                  className="relative group animate-fade-in-up card-premium animate-card-slide-in"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  <div className="glass-effect p-8 rounded-2xl border border-[rgba(106,227,255,0.2)] group-hover:border-[rgba(106,227,255,0.5)] transition-all group-hover:shadow-lg group-hover:shadow-[#6ae3ff]/20 animate-glow-box-shadow animate-card-border-glow">
                     <div className="text-5xl font-serif font-bold text-[#d4af37]/30 mb-4 group-hover:text-[#d4af37]/60 transition-colors">
                       {item.step}
                     </div>

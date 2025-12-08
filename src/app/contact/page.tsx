@@ -2,9 +2,9 @@
 
 import type React from "react"
 
-import { Particles } from "@/components/particles"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Particles } from "../../components/particles"
+import { Header } from "../../components/header"
+import { Footer } from "../../components/footer"
 import { Mail, Phone, MapPin, Send, Clock, CheckCircle } from "lucide-react"
 import { useState } from "react"
 
@@ -34,7 +34,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-[#0a0b10] overflow-hidden relative">
-      <Particles particleCount={75} particleColor="#6ae3ff" particleSpeed={0.4} />
+      <Particles particleCount={145} particleColor="#6ae3ff" particleSpeed={0.4} />
 
       <div className="relative z-10">
         <Header />
@@ -95,7 +95,7 @@ export default function Contact() {
                     style={{ animationDelay: `${i * 0.1}s` }}
                   >
                     <div className="w-14 h-14 rounded-lg glass-effect flex items-center justify-center flex-shrink-0 group-hover:bg-[rgba(212,175,55,0.1)] group-hover:scale-110 transition-all duration-300">
-                      <contact.icon className="w-6 h-6 text-[#d4af37] group-hover:text-[#6ae3ff] transition-colors" />
+                      <contact.icon className="w-6 h-6 text-[#d4af37] group-hover:text-[#6ae3ff] transition-colors animate-icon-rotate" />
                     </div>
                     <div>
                       <p className="text-[#cbd5e1] text-sm mb-1">{contact.label}</p>
@@ -109,7 +109,7 @@ export default function Contact() {
 
               <div className="glass-effect p-8 rounded-2xl border border-[rgba(106,227,255,0.2)] animate-glow-box-shadow">
                 <div className="flex items-center gap-3 mb-4">
-                  <Clock className="w-5 h-5 text-[#6ae3ff]" />
+                  <Clock className="w-5 h-5 text-[#6ae3ff] animate-icon-rotate" />
                   <h3 className="font-serif font-bold text-[#e5e7eb]">Response Time</h3>
                 </div>
                 <p className="text-[#cbd5e1] mb-4">
@@ -130,7 +130,7 @@ export default function Contact() {
             >
               {submitted && (
                 <div className="mb-6 p-4 bg-[rgba(106,227,255,0.1)] border border-[#6ae3ff] rounded-lg flex items-center gap-3 animate-slide-up">
-                  <CheckCircle className="w-5 h-5 text-[#6ae3ff]" />
+                  <CheckCircle className="w-5 h-5 text-[#6ae3ff] animate-icon-rotate" />
                   <p className="text-[#9adfff]">Message sent! We'll be in touch soon.</p>
                 </div>
               )}
@@ -207,7 +207,7 @@ export default function Contact() {
                   className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#6ae3ff] text-[#0a0b10] font-bold rounded-lg hover:shadow-2xl hover:shadow-[#6ae3ff]/50 transition-all hover:scale-105 active:scale-95 animate-slide-up"
                   style={{ animationDelay: "0.35s" }}
                 >
-                  {submitted ? "Message Sent!" : "Send Message"} <Send size={18} />
+                  {submitted ? "Message Sent!" : "Send Message"} <Send size={18} className="animate-icon-rotate" />
                 </button>
               </div>
             </form>

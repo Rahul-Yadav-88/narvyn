@@ -1,8 +1,8 @@
 "use client"
 
-import { Particles } from "@/components/particles"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Particles } from "../../components/particles"
+import { Header } from "../../components/header"
+import { Footer } from "../../components/footer"
 import Link from "next/link"
 import { ExternalLink, Star, TrendingUp } from "lucide-react"
 import { useState } from "react"
@@ -69,7 +69,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-[#0a0b10] overflow-hidden relative">
-      <Particles particleCount={70} particleColor="#6ae3ff" particleSpeed={0.35} />
+      <Particles particleCount={140} particleColor="#6ae3ff" particleSpeed={0.35} />
 
       <div className="relative z-10">
         <Header />
@@ -166,7 +166,7 @@ export default function Portfolio() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="glass-effect p-8 rounded-2xl border border-[rgba(106,227,255,0.2)] text-center animate-fade-in-up animate-glow-box-shadow"
+                  className="glass-effect p-8 rounded-2xl border border-[rgba(106,227,255,0.2)] text-center animate-fade-in-up animate-glow-box-shadow card-premium animate-card-slide-in animate-card-border-glow"
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >
                   <div className="text-5xl font-serif font-bold gradient-gold-cyan mb-3">{item.stat}</div>
