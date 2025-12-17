@@ -178,10 +178,10 @@ export default function Services() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { category: "Frontend", techs: ["React", "Next.js", "Vue.js", "TypeScript"] },
-                { category: "Backend", techs: ["Node.js", "Python", "Java", "Go"] },
-                { category: "Database", techs: ["PostgreSQL", "MongoDB", "Redis", "Firebase"] },
-                { category: "DevOps", techs: ["Docker", "Kubernetes", "AWS", "Vercel"] },
+                { category: "Frontend", techs: ["React", "Next.js", "Vue.js", "TypeScript", "WordPress", "Wix", "Shopify", "Webflow"] },
+                { category: "Backend", techs: ["Node.js", "Python", "Java", "Django", "Flask", "FastAPI", "Express.js"] },
+                { category: "Database", techs: ["PostgreSQL", "MongoDB", "Redis", "Firebase", "MySQL", "SQLite",] },
+                { category: "DevOps", techs: ["Docker", "Kubernetes", "AWS", "Vercel", "GitHub Actions", ] },
               ].map((stack, i) => (
                 <div key={i} className="animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s` }}>
                   <h4 className="text-[#d4af37] font-semibold mb-4 text-center">{stack.category}</h4>

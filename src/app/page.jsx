@@ -1,8 +1,8 @@
 "use client"
 
-import { Particles } from "@/components/particles"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Particles } from "../components/particles"
+import { Header } from "../components/header"
+import { Footer } from "../components/footer"
 import Link from "next/link"
 import { ArrowRight, Code2, Zap, Shield, Sparkles, Rocket } from "lucide-react"
 import { useEffect, useState, useRef } from "react"
@@ -109,10 +109,10 @@ export default function Home() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 border-y border-[rgba(212,175,55,0.1)]">
           <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "150+", label: "Projects" },
+              { number: "50+", label: "Projects" },
               { number: "98%", label: "Satisfaction" },
-              { number: "50+", label: "Enterprises" },
-              { number: "12+", label: "Years" },
+              { number: "5+", label: "Enterprises" },
+              { number: "1+", label: "Years" },
             ].map((stat, i) => (
               <div
                 key={i}
@@ -177,19 +177,41 @@ export default function Home() {
             </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {["React", "Next.js", "TypeScript", "Tailwind", "Node.js", "PostgreSQL", "AWS", "Docker"].map(
-                (tech, i) => (
-                  <div
-                    key={i}
-                    className="scroll-reveal glass-effect p-6 rounded-xl border border-[rgba(106,227,255,0.2)] text-center hover:border-[rgba(106,227,255,0.6)] transition-all hover:scale-110 hover:shadow-lg hover:shadow-[#6ae3ff]/30 animate-fade-in-up hover-lift card-premium animate-card-slide-in"
-                    style={{ animationDelay: `${i * 0.05}s` }}
-                    ref={addRef}
-                  >
-                    <p className="text-[#e5e7eb] font-semibold">{tech}</p>
-                  </div>
-                ),
-              )}
-            </div>
+  {[
+   "React.js",
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Node.js",
+    "Express.js",
+    "Django",
+    "PostgreSQL",
+    "MongoDB",
+    "MySQL",
+    "WordPress",
+    "Wix",
+    "Shopify",
+    "Webflow",
+    "Strapi",
+    "Firebase",
+    "AWS",
+    "Vercel",
+    "Docker",
+    "Git & GitHub",
+  ].map((tech, i) => (
+    <div
+      key={i}
+      className="scroll-reveal glass-effect p-6 rounded-xl border border-[rgba(106,227,255,0.2)] text-center hover:border-[rgba(106,227,255,0.6)] transition-all hover:scale-110 hover:shadow-lg hover:shadow-[#6ae3ff]/30 animate-fade-in-up hover-lift card-premium animate-card-slide-in"
+      style={{ animationDelay: `${i * 0.05}s` }}
+      ref={addRef}
+    >
+      <p className="text-[#e5e7eb] font-semibold">{tech}</p>
+    </div>
+  ))}
+</div>
+
           </div>
         </section>
 

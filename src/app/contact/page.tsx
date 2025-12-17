@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { Particles } from "../../components/particles"
-import { Header } from "../../components/header"
-import { Footer } from "../../components/footer"
-import { Mail, Phone, MapPin, Send, Clock, CheckCircle } from "lucide-react"
-import { useState } from "react"
+import { Particles } from "../../components/particles";
+import { Header } from "../../components/header";
+import { Footer } from "../../components/footer";
+import { Mail, Phone, MapPin, Send, Clock, CheckCircle } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -15,26 +15,40 @@ export default function Contact() {
     company: "",
     budget: "",
     message: "",
-  })
-  const [submitted, setSubmitted] = useState(false)
+  });
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormState((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormState((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSubmitted(true)
+    e.preventDefault();
+    setSubmitted(true);
     setTimeout(() => {
-      setFormState({ name: "", email: "", company: "", budget: "", message: "" })
-      setSubmitted(false)
-    }, 3000)
-  }
+      setFormState({
+        name: "",
+        email: "",
+        company: "",
+        budget: "",
+        message: "",
+      });
+      setSubmitted(false);
+    }, 3000);
+  };
 
   return (
     <div className="min-h-screen bg-[#0a0b10] overflow-hidden relative">
-      <Particles particleCount={145} particleColor="#6ae3ff" particleSpeed={0.4} />
+      <Particles
+        particleCount={145}
+        particleColor="#6ae3ff"
+        particleSpeed={0.4}
+      />
 
       <div className="relative z-10">
         <Header />
@@ -50,10 +64,15 @@ export default function Contact() {
           </div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 animate-fade-in-up">
-              Let's Create <span className="gradient-gold-cyan">Something Great</span>
+              Let's Create{" "}
+              <span className="gradient-gold-cyan">Something Great</span>
             </h1>
-            <p className="text-xl text-[#cbd5e1] mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Ready to start your next project? Get in touch and let's discuss your vision.
+            <p
+              className="text-xl text-[#cbd5e1] mb-8 animate-fade-in-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              Ready to start your next project? Get in touch and let's discuss
+              your vision.
             </p>
           </div>
         </section>
@@ -84,7 +103,7 @@ export default function Contact() {
                   {
                     icon: MapPin,
                     label: "Location",
-                    value: "San Francisco, CA",
+                    value: "Gurgaon, Haryana, India",
                     link: "#",
                   },
                 ].map((contact, i) => (
@@ -98,7 +117,9 @@ export default function Contact() {
                       <contact.icon className="w-6 h-6 text-[#d4af37] group-hover:text-[#6ae3ff] transition-colors animate-icon-rotate" />
                     </div>
                     <div>
-                      <p className="text-[#cbd5e1] text-sm mb-1">{contact.label}</p>
+                      <p className="text-[#cbd5e1] text-sm mb-1">
+                        {contact.label}
+                      </p>
                       <p className="text-lg font-semibold text-[#e5e7eb] group-hover:text-[#d4af37] transition-colors">
                         {contact.value}
                       </p>
@@ -110,14 +131,19 @@ export default function Contact() {
               <div className="glass-effect p-8 rounded-2xl border border-[rgba(106,227,255,0.2)] animate-glow-box-shadow">
                 <div className="flex items-center gap-3 mb-4">
                   <Clock className="w-5 h-5 text-[#6ae3ff] animate-icon-rotate" />
-                  <h3 className="font-serif font-bold text-[#e5e7eb]">Response Time</h3>
+                  <h3 className="font-serif font-bold text-[#e5e7eb]">
+                    Response Time
+                  </h3>
                 </div>
                 <p className="text-[#cbd5e1] mb-4">
-                  We typically respond within 24 hours during business days. For urgent inquiries, call us directly.
+                  We typically respond within 24 hours during business days. For
+                  urgent inquiries, call us directly.
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-[#6ae3ff] animate-pulse"></div>
-                  <span className="text-sm text-[#9adfff]">Available for new projects</span>
+                  <span className="text-sm text-[#9adfff]">
+                    Available for new projects
+                  </span>
                 </div>
               </div>
             </div>
@@ -131,12 +157,19 @@ export default function Contact() {
               {submitted && (
                 <div className="mb-6 p-4 bg-[rgba(106,227,255,0.1)] border border-[#6ae3ff] rounded-lg flex items-center gap-3 animate-slide-up">
                   <CheckCircle className="w-5 h-5 text-[#6ae3ff] animate-icon-rotate" />
-                  <p className="text-[#9adfff]">Message sent! We'll be in touch soon.</p>
+                  <p className="text-[#9adfff]">
+                    Message sent! We'll be in touch soon.
+                  </p>
                 </div>
               )}
               <div className="space-y-6">
-                <div className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
-                  <label className="block text-[#e5e7eb] font-medium mb-2">Your Name</label>
+                <div
+                  className="animate-slide-up"
+                  style={{ animationDelay: "0.1s" }}
+                >
+                  <label className="block text-[#e5e7eb] font-medium mb-2">
+                    Your Name
+                  </label>
                   <input
                     type="text"
                     name="name"
@@ -144,12 +177,17 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-[#0a0b10]/50 border border-[rgba(212,175,55,0.2)] rounded-lg focus:border-[#6ae3ff] focus:outline-none transition-all focus:shadow-lg focus:shadow-[#6ae3ff]/20 text-[#e5e7eb] placeholder-[#cbd5e1]/50"
-                    placeholder="John Doe"
+                    placeholder="Name"
                   />
                 </div>
 
-                <div className="animate-slide-up" style={{ animationDelay: "0.15s" }}>
-                  <label className="block text-[#e5e7eb] font-medium mb-2">Email Address</label>
+                <div
+                  className="animate-slide-up"
+                  style={{ animationDelay: "0.15s" }}
+                >
+                  <label className="block text-[#e5e7eb] font-medium mb-2">
+                    Email Address
+                  </label>
                   <input
                     type="email"
                     name="email"
@@ -157,12 +195,17 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-[#0a0b10]/50 border border-[rgba(212,175,55,0.2)] rounded-lg focus:border-[#6ae3ff] focus:outline-none transition-all focus:shadow-lg focus:shadow-[#6ae3ff]/20 text-[#e5e7eb] placeholder-[#cbd5e1]/50"
-                    placeholder="john@example.com"
+                    placeholder="name@example.com"
                   />
                 </div>
 
-                <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
-                  <label className="block text-[#e5e7eb] font-medium mb-2">Company</label>
+                <div
+                  className="animate-slide-up"
+                  style={{ animationDelay: "0.2s" }}
+                >
+                  <label className="block text-[#e5e7eb] font-medium mb-2">
+                    Company
+                  </label>
                   <input
                     type="text"
                     name="company"
@@ -173,8 +216,13 @@ export default function Contact() {
                   />
                 </div>
 
-                <div className="animate-slide-up" style={{ animationDelay: "0.25s" }}>
-                  <label className="block text-[#e5e7eb] font-medium mb-2">Budget Range</label>
+                <div
+                  className="animate-slide-up"
+                  style={{ animationDelay: "0.25s" }}
+                >
+                  <label className="block text-[#e5e7eb] font-medium mb-2">
+                    Budget Range
+                  </label>
                   <select
                     name="budget"
                     value={formState.budget}
@@ -182,15 +230,20 @@ export default function Contact() {
                     className="w-full px-4 py-3 bg-[#0a0b10]/50 border border-[rgba(212,175,55,0.2)] rounded-lg focus:border-[#6ae3ff] focus:outline-none transition-all focus:shadow-lg focus:shadow-[#6ae3ff]/20 text-[#e5e7eb]"
                   >
                     <option value="">Select a range</option>
-                    <option value="5k-10k">$5k - $10k</option>
-                    <option value="10k-25k">$10k - $25k</option>
-                    <option value="25k-50k">$25k - $50k</option>
-                    <option value="50k+">$50k+</option>
+                    <option value="5l-10l">₹15k – ₹25k</option>
+                    <option value="10l-25l">₹25k – ₹50k</option>
+                    <option value="25l-50l">₹50k – ₹70k</option>
+                    <option value="50l+">₹70k+</option>
                   </select>
                 </div>
 
-                <div className="animate-slide-up" style={{ animationDelay: "0.3s" }}>
-                  <label className="block text-[#e5e7eb] font-medium mb-2">Message</label>
+                <div
+                  className="animate-slide-up"
+                  style={{ animationDelay: "0.3s" }}
+                >
+                  <label className="block text-[#e5e7eb] font-medium mb-2">
+                    Message
+                  </label>
                   <textarea
                     name="message"
                     value={formState.message}
@@ -207,7 +260,8 @@ export default function Contact() {
                   className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#6ae3ff] text-[#0a0b10] font-bold rounded-lg hover:shadow-2xl hover:shadow-[#6ae3ff]/50 transition-all hover:scale-105 active:scale-95 animate-slide-up"
                   style={{ animationDelay: "0.35s" }}
                 >
-                  {submitted ? "Message Sent!" : "Send Message"} <Send size={18} className="animate-icon-rotate" />
+                  {submitted ? "Message Sent!" : "Send Message"}{" "}
+                  <Send size={18} className="animate-icon-rotate" />
                 </button>
               </div>
             </form>
@@ -217,5 +271,5 @@ export default function Contact() {
         <Footer />
       </div>
     </div>
-  )
+  );
 }

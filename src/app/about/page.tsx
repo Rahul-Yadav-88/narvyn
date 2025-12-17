@@ -1,11 +1,23 @@
-"use client"
+"use client";
 
-import { Particles } from "../../components/particles"
-import { Header } from "../../components/header"
-import { Footer } from "../../components/footer"
-import { Users, Target, Zap, Award, Lightbulb, Rocket } from "lucide-react"
+import { Particles } from "../../components/particles";
+import { Header } from "../../components/header";
+import { Footer } from "../../components/footer";
+import {
+  Users,
+  Target,
+  Zap,
+  Award,
+  Lightbulb,
+  Rocket,
+  Shield,
+  TrendingUp,
+  Handshake,
+} from "lucide-react";
 
 const team = [
+ 
+
   {
     name: "Sarah Chen",
     role: "Creative Director",
@@ -30,12 +42,16 @@ const team = [
     image: "/professional-man-headshot.png",
     bio: "DevOps and infrastructure expert",
   },
-]
+];
 
 export default function About() {
   return (
     <div className="min-h-screen bg-[#0a0b10] overflow-hidden relative">
-      <Particles particleCount={130} particleColor="#9adfff" particleSpeed={0.25} />
+      <Particles
+        particleCount={130}
+        particleColor="#9adfff"
+        particleSpeed={0.25}
+      />
 
       <div className="relative z-10">
         <Header />
@@ -57,9 +73,17 @@ export default function About() {
               className="text-xl text-[#cbd5e1] mb-8 leading-relaxed animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              We're a collective of passionate developers, designers, and strategists dedicated to creating premium
-              digital experiences that push boundaries and deliver measurable impact. Our mission is to transform
-              visionary ideas into world-class digital products.
+              We’re a collective of passionate developers, designers, and
+              strategists dedicated to crafting premium digital experiences that
+              drive real business impact. Our mission is to turn ambitious ideas
+              into world-class digital products through thoughtful design,
+              cutting-edge technology, and strategic execution. <br /> We
+              partner closely with startups and growing businesses to build
+              scalable, high-performance solutions that solve real problems and
+              create lasting value. With a strong focus on quality, innovation,
+              and measurable outcomes, we don’t just build products—we build
+              digital foundations that help brands grow, compete, and lead in
+              the digital-first world.
             </p>
           </div>
         </section>
@@ -78,13 +102,49 @@ export default function About() {
                 icon: Users,
                 title: "Our Team",
                 description:
-                  "Industry-leading experts with decades of combined experience building world-class digital products.",
+                  "A team of industry-leading experts delivering world-class digital products with precision and innovation.",
               },
               {
                 icon: Zap,
                 title: "Our Promise",
                 description:
                   "Excellence in every pixel, code line, and interaction. We deliver nothing less than exceptional results.",
+              },
+              {
+                icon: Lightbulb,
+                title: "Our Vision",
+                description:
+                  "To become a trusted digital partner for businesses worldwide by building scalable, future-ready solutions.",
+              },
+              {
+                icon: Shield,
+                title: "Our Values",
+                description:
+                  "Integrity, transparency, and accountability guide every decision we make and every solution we deliver.",
+              },
+              {
+                icon: Rocket,
+                title: "Our Approach",
+                description:
+                  "We combine strategy, design, and technology to solve real-world problems with measurable impact.",
+              },
+              {
+                icon: Award,
+                title: "Our Quality Standard",
+                description:
+                  "We follow rigorous processes and best practices to ensure reliability, performance, and long-term success.",
+              },
+              {
+                icon: TrendingUp,
+                title: "Our Growth Mindset",
+                description:
+                  "We continuously evolve with emerging technologies to help our clients stay ahead in a competitive market.",
+              },
+              {
+                icon: Handshake,
+                title: "Our Partnerships",
+                description:
+                  "We believe in long-term collaborations built on trust, shared goals, and mutual success.",
               },
             ].map((item, i) => (
               <div
@@ -93,7 +153,9 @@ export default function About() {
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
                 <item.icon className="w-14 h-14 text-[#d4af37] mx-auto mb-4 group-hover:text-[#6ae3ff] group-hover:scale-125 transition-all duration-300 animate-icon-rotate" />
-                <h3 className="text-2xl font-serif font-bold mb-3 text-[#e5e7eb]">{item.title}</h3>
+                <h3 className="text-2xl font-serif font-bold mb-3 text-[#e5e7eb]">
+                  {item.title}
+                </h3>
                 <p className="text-[#cbd5e1]">{item.description}</p>
               </div>
             ))}
@@ -112,17 +174,20 @@ export default function About() {
                 {
                   icon: Lightbulb,
                   title: "Innovation",
-                  description: "We constantly explore new technologies and methodologies to stay ahead of the curve.",
+                  description:
+                    "We constantly explore new technologies and methodologies to stay ahead of the curve. Our team embraces experimentation, creative problem-solving, and forward-thinking strategies to build solutions that are future-ready, scalable, and aligned with evolving market needs.",
                 },
                 {
                   icon: Award,
                   title: "Quality",
-                  description: "Every project receives meticulous attention to detail and rigorous quality assurance.",
+                  description:
+                    "Every project receives meticulous attention to detail and rigorous quality assurance. From code architecture to user experience, we follow best practices, performance benchmarks, and thorough testing to ensure reliability, security, and long-term value.",
                 },
                 {
                   icon: Rocket,
                   title: "Impact",
-                  description: "We measure success by the tangible results we deliver for our clients and partners.",
+                  description:
+                    "We measure success by the tangible results we deliver for our clients and partners. Our focus is on creating measurable business outcomes—driving growth, improving efficiency, and delivering digital products that make a meaningful difference.",
                 },
               ].map((value, i) => (
                 <div
@@ -131,7 +196,9 @@ export default function About() {
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >
                   <value.icon className="w-12 h-12 text-[#d4af37] mb-4 hover:scale-110 transition-transform animate-icon-rotate" />
-                  <h3 className="text-xl font-serif font-bold mb-3 text-[#e5e7eb]">{value.title}</h3>
+                  <h3 className="text-xl font-serif font-bold mb-3 text-[#e5e7eb]">
+                    {value.title}
+                  </h3>
                   <p className="text-[#cbd5e1]">{value.description}</p>
                 </div>
               ))}
@@ -140,7 +207,7 @@ export default function About() {
         </section>
 
         {/* Team Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        {/* <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-16">
               Meet The <span className="gradient-gold-cyan">Team</span>
@@ -148,7 +215,11 @@ export default function About() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {team.map((member, i) => (
-                <div key={i} className="text-center group animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div
+                  key={i}
+                  className="text-center group animate-fade-in-up"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
                   <div className="relative mb-6 rounded-xl overflow-hidden">
                     <img
                       src={member.image || "/placeholder.svg"}
@@ -167,7 +238,7 @@ export default function About() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Stats Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[rgba(212,175,55,0.05)] to-[#0a0b10]">
@@ -187,8 +258,12 @@ export default function About() {
                   className="glass-effect p-8 text-center rounded-2xl border border-[rgba(106,227,255,0.2)] hover:border-[rgba(106,227,255,0.5)] transition-all hover:shadow-lg hover:shadow-[#6ae3ff]/20 animate-fade-in-up animate-glow-box-shadow group"
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >
-                  <div className="text-4xl mb-3 group-hover:scale-125 transition-transform">{stat.icon}</div>
-                  <div className="text-4xl md:text-5xl font-serif font-bold gradient-gold-cyan mb-2">{stat.number}</div>
+                  <div className="text-4xl mb-3 group-hover:scale-125 transition-transform">
+                    {stat.icon}
+                  </div>
+                  <div className="text-4xl md:text-5xl font-serif font-bold gradient-gold-cyan mb-2">
+                    {stat.number}
+                  </div>
                   <p className="text-[#cbd5e1] text-sm">{stat.label}</p>
                 </div>
               ))}
@@ -199,5 +274,5 @@ export default function About() {
         <Footer />
       </div>
     </div>
-  )
+  );
 }
