@@ -61,7 +61,7 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-[rgba(212,175,55,0.1)] border border-[#d4af37]/30 rounded-full mb-6 animate-bounce-in">
                 <Sparkles size={16} className="text-[#d4af37] animate-spin" style={{ animationDuration: "3s" }} />
                 <p className="text-[#d4af37] font-medium text-sm tracking-widest animate-text-reveal">
-                  Rahul is Aakash's father
+                  Welcome to the future
                 </p>
               </div>
               <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-balance animate-fade-in-up hover:animate-neon-flicker cursor-pointer transition-all">
