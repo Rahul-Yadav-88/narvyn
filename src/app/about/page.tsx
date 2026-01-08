@@ -248,10 +248,10 @@ export default function About() {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { number: "150+", label: "Projects Delivered", icon: "📦" },
-                { number: "50+", label: "Enterprise Clients", icon: "🏢" },
-                { number: "12+", label: "Years Experience", icon: "⏰" },
-                { number: "98%", label: "Client Satisfaction", icon: "⭐" },
+                { number: "40+", label: "Projects Delivered", icon: "📦" },
+                { number: "8+", label: "Enterprise Clients", icon: "🏢" },
+                { number: "1+", label: "Years Experience", icon: "⏰" },
+                { number: "99%", label: "Client Satisfaction", icon: "⭐" },
               ].map((stat, i) => (
                 <div
                   key={i}
